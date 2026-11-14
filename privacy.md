@@ -5,7 +5,7 @@ permalink: /privacy
 
 # Moneywake Privacy Policy
 
-**Effective date:** November 7, 2026  **Last updated:** November 7, 2026
+**Effective date:** November 7, 2026  **Last updated:** November 14, 2026
 
 ## 1. Who we are
 
@@ -19,10 +19,14 @@ money for trading, hold funds, or place trades. It is **not affiliated with, end
 
 * **Market and trade data.** Our servers fetch public trade and market data from Polymarket's public APIs and store a
   temporary copy that the app downloads.
-* **Pictures and price charts.** The app loads market pictures, traders' profile pictures and a market's public price
-  history directly from Polymarket (its public APIs and image hosting). These requests carry only what any web request
-  does (your IP address and network details) and the item being asked for; no account, alert setting or other personal
-  information is sent. Pictures are kept in the app's cache on your phone.
+* **Pictures, price charts and order books.** The app loads market pictures, traders' profile pictures, a market's public
+  price history and its public order book directly from Polymarket (its public APIs and image hosting). These requests carry
+  only what any web request does (your IP address and network details) and the item being asked for; no account, alert
+  setting or other personal information is sent. Pictures are kept in the app's cache on your phone.
+* **Your Polymarket profile (optional).** If you choose to link your Polymarket profile, your phone sends the username you
+  type to Polymarket's public search, and then the wallet address of the profile you pick to Polymarket's public positions
+  service, to read that profile's public open positions. These requests go from your phone to Polymarket, not through us.
+  **We never receive the username, the wallet address or the positions.** Marking a market "I hold this" needs no profile at all.
 * **AI Insights.** Summaries are written by Google's Gemini model on our servers from that public trade data. **No
   personal information about you is sent to the model.**
 * **Information about other people.** The app displays public, pseudonymous information that traders publish on
@@ -38,7 +42,7 @@ precise location or other personal details. The app uses the following services,
 | What | Details | Why | Provided by |
 |---|---|---|---|
 | **Anonymous user ID** | A random ID created when you first open the app (Firebase Authentication, anonymous sign-in). It is not linked to your name or email. | To tell our server which installation has Full Access | Google (Firebase) |
-| **Push token and alert settings** | A device token used to deliver notifications. Your alert filters (category, price range, trader group and minimum trade size), the traders you follow and the markets you watch are sent as notification-topic subscriptions. | To deliver the alerts you asked for | Google (Firebase Cloud Messaging) |
+| **Push token and alert settings** | A device token used to deliver notifications. Your alert filters (category, price range, trader group and minimum trade size), the traders you follow and the markets you watch or hold are sent as notification-topic subscriptions. Which side of a market you hold is never sent. | To deliver the alerts you asked for | Google (Firebase Cloud Messaging) |
 | **Purchase information** | If you buy Full Access, Google Play handles the payment; we never see your card or bank details. We store an **order ID and purchase token** with your anonymous user ID and the time it was verified. If a Google Play reviewer unlocks Full Access with a review code, we store that the anonymous user ID was unlocked this way. | To confirm the purchase with Google, unlock Full Access, and restore it if you reinstall | Google Play; stored in Google Cloud Firestore |
 | **Usage analytics** | App instance ID, device and app version, the app-open event and automatic events such as sessions, screen views and in-app purchases, and coarse location derived from your IP address | To understand how the app is used and improve it | Google (Firebase / Google Analytics) |
 | **Crash reports** | Stack traces, app state and device details at the time of a crash, and an installation ID | To find and fix crashes | Google (Firebase Crashlytics) |
@@ -50,7 +54,7 @@ not use it for advertising. We share it only with the service providers above, w
 
 ## 4. What stays on your device
 
-The app stores the following **only on your phone**: your alert profiles, follows, watches and display settings; onboarding
+The app stores the following **only on your phone**: your alert profiles, follows, watches and display settings; the markets you mark as held, the side you hold and, if you link one, the name and wallet address of your Polymarket profile with the positions imported from it (none of this is sent to us); onboarding
 progress and a launch counter; a cached Full Access status; the alerts you received over the last year, with the trader names
 and shortened wallet addresses shown on them, and their results; and the last AI Insights. You can clear the alert list from
 the Alerts screen, or delete everything by uninstalling the app or clearing its storage. Android's automatic backup may copy
